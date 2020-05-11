@@ -13,6 +13,4 @@ docker push kvanwoerden/multi-worker:$SHA
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=kvanwoerden/multi-server:$SHA
 kubectl set image deployments/client-deployment client=kvanwoerden/multi-client:$SHA
-kubectl set iamge deployments/worker-deployment worker=kvanwoerden/multi-worker:$SHA
-
-rm multi-k8s-276812-0c3cdbdc7fbb.json
+kubectl set image deployments/worker-deployment worker=kvanwoerden/multi-worker:$SHA
